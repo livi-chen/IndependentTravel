@@ -1,0 +1,112 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom", //自定义导航栏样式
+				"navigationBarTextStyle": "black",
+				"app-plus": {
+					// "bounce": "none", //无页面回弹效果
+					"titleNView": false //原生导航栏不显示
+				}
+			}
+		},
+		{
+			"path": "pages/add/add",
+			"style": {
+				"navigationBarTitleText": "创建行程",
+				"app-plus": {
+					//原生标题栏按钮配置
+					"titleNView": {
+						"titleAlign": "center",
+						"buttons": [{
+							//原生标题栏增加确定按钮，点击事件可通过页面的 onNavigationBarButtonTap 函数进行监听
+							"text": "确定",
+							"fontSize": "14px",
+							"width": "70px"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/find/find",
+			"style": {
+				"navigationStyle": "custom", //自定义导航栏样式
+				"navigationBarTextStyle": "black",
+				"app-plus": {
+					"titleNView": false //原生导航栏不显示
+				}
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {}
+		},
+		{
+			"path": "pages/xingcheng/xingcheng",
+			"style": {}
+		},
+		{
+			"path": "pages/calendar/calendar",
+			"style": {
+				"navigationBarTitleText": "选择日期"
+			}
+		}, {
+			"path": "pages/calendar/calendar",
+			"style": {
+				"navigationBarTitleText": "选择日期"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationStyle": "default",
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"app-plus": {
+			"titleNView": {
+				"backButton": {
+					"fontSize": "22px"
+				}
+			}
+		}
+	},
+	//设置底部标签栏
+	"tabBar": {
+		"color": "#000000",
+		"backgroundColor": "#FFFFFF",
+		"selectedColor": "#000000",
+		"borderStyle": "white",
+		"fontSize": "10px",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "主页",
+				"iconPath": "static/tabBarIcon/home_unselect.png",
+				"selectedIconPath": "static/tabBarIcon/home.png"
+			},
+			{
+				"pagePath": "pages/xingcheng/xingcheng",
+				"text": "行程",
+				"iconPath": "static/tabBarIcon/xingcheng_unselect.png",
+				"selectedIconPath": "static/tabBarIcon/xingcheng.png"
+			},
+			{
+				"pagePath": "pages/add/add",
+				"iconPath": "static/tabBarIcon/add.png",
+				"selectedIconPath": "static/tabBarIcon/add.png"
+			},
+			{
+				"pagePath": "pages/find/find",
+				"text": "发现",
+				"iconPath": "static/tabBarIcon/find_unselect.png",
+				"selectedIconPath": "static/tabBarIcon/find.png"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"text": "我的",
+				"iconPath": "static/tabBarIcon/mine_unselect.png",
+				"selectedIconPath": "static/tabBarIcon/mine.png"
+			}
+		]
+	}
+}

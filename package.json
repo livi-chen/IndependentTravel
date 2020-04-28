@@ -1,0 +1,19 @@
+{
+  "name": "IndependentTravel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "weex-ui": "^0.8.4"
+  },
+  "devDependencies": {
+    "babel-plugin-component": "^1.1.1",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}

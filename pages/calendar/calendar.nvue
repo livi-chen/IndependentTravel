@@ -1,0 +1,85 @@
+<template>
+	<div class="wrapper">
+		<wxc-page-calendar :date-range="dateRange" :animationType="animationType" :selected-date="selectedDate"
+		 :selected-note="selectedNote" :is-range="isRange" :minibar-cfg="minibarCfg" :desc-list="descList"
+		 @wxcPageCalendarBackClicked="wxcPageCalendarBackClicked" @wxcPageCalendarDateSelected="wxcPageCalendarDateSelected"
+		 ref="wxcPageCalendar"></wxc-page-calendar>
+	</div>
+</template>
+<script>
+	import {
+		WxcPageCalendar
+	} from 'weex-ui';
+	export default {
+		components: {
+			WxcPageCalendar
+		},
+		onLoad() {
+			this.isRange = true;
+			uni.$on('updateDate', this.updateDate)
+			setTimeout(() => {
+				this.$refs['wxcPageCalendar'].show();
+			}, 100);
+		},
+		onUnload() {
+			//撤销监听
+			uni.$off('updateDate', this.updateDate)
+		},
+		data: () => ({
+			animationType: 'push',
+			currentDate: '',
+			selectedDate: ['2020-05-23', '2020-05-30'],
+			isRange: true,
+			calendarTitle: '选择日期',
+			dateRange: ['2020-05-10', '2021-05-31'],
+			selectedNote: ['出发', '到达', '往返'],
+			minibarCfg: {
+				title: '日期选择'
+			},
+			selectedTextStyle: {
+				'text-color': '#FFFFFF'
+			}
+			// ,descList: [{
+			// 		date: '2019-06-23',
+			// 	},
+			// 	{
+			// 		date: '2019-06-24',
+			// 	}
+			// ]
+		}),
+		methods: {
+			wxcPageCalendarDateSelected(e) {
+				this.selectedDate = e.date;
+				// this.currentDate = e.date;
+				uni.$emit('checkDate', {
+					data: e.date
+				});
+				uni.switchTab({
+					url: '/pages/add/add',
+					success: function(data) {
+						console.log('跳转成功', data)
+					},
+					fail: function(data) {
+						console.log('跳转失败', data)
+					}
+				})
+			},
+			wxcPageCalendarBackClicked() {},
+			showCalendar() {
+				this.isRange = false;
+				setTimeout(() => {
+					this.$refs['wxcPageCalendar'].show();
+				}, 10);
+			},
+			showReturnCalendar() {
+				this.isRange = true;
+				setTimeout(() => {
+					this.$refs['wxcPageCalendar'].show();
+				}, 10);
+			},
+			updateDate(e) {
+				this.selectedDate = [e.startdate, e.enddate];
+			}
+		}
+	};
+</script>

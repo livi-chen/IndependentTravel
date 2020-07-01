@@ -7,7 +7,8 @@
 				"navigationBarTextStyle": "black",
 				"app-plus": {
 					// "bounce": "none", //无页面回弹效果
-					"titleNView": false //原生导航栏不显示
+					"titleNView": false, //原生导航栏不显示
+					"scrollIndicator": "none"
 				}
 			}
 		},
@@ -34,28 +35,149 @@
 			"style": {
 				"navigationStyle": "custom", //自定义导航栏样式
 				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"app-plus": {
+					"titleNView": false, //原生导航栏不显示
+					"scrollIndicator": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarBackgroundColor": "#418A71",
+				"navigationBarTextStyle": "white",
 				"app-plus": {
 					"titleNView": false //原生导航栏不显示
 				}
 			}
 		},
 		{
-			"path": "pages/mine/mine",
-			"style": {}
-		},
-		{
 			"path": "pages/xingcheng/xingcheng",
-			"style": {}
+			"style": {
+				"app-plus": {
+					"titleNView": false, //原生导航栏不显示
+					"scrollIndicator": "none"
+				}
+			}
 		},
 		{
 			"path": "pages/calendar/calendar",
 			"style": {
-				"navigationBarTitleText": "选择日期"
+				"navigationBarTitleText": "选择日期",
+				"scrollIndicator": "none"
 			}
 		}, {
 			"path": "pages/calendar/calendar",
 			"style": {
-				"navigationBarTitleText": "选择日期"
+				"navigationBarTitleText": "选择日期",
+				"scrollIndicator": "none"
+			}
+		}, {
+			"path": "pages/destination/destination",
+			"style": {
+				"navigationBarTitleText": "选择城市",
+				"scrollIndicator": "none"
+			}
+		},
+		{
+			"path": "pages/xingchengdetail/xingchengdetail",
+			"style": {
+				"navigationBarTitleText": "马尔代夫七日游",
+				"scrollIndicator": "none"
+			}
+		}, {
+			"path": "pages/share/share",
+			"style": {
+				"navigationBarTitleText": "一键分享",
+				"app-plus": {
+					//原生标题栏按钮配置
+					"titleNView": {
+						"titleAlign": "center",
+						"buttons": [{
+							//原生标题栏增加确定按钮，点击事件可通过页面的 onNavigationBarButtonTap 函数进行监听
+							"text": "确定",
+							"fontSize": "14px",
+							"width": "70px"
+						}]
+					}
+				}
+			}
+		}, {
+			"path": "pages/member/member",
+			"style": {
+				"navigationBarTitleText": "成员列表",
+				"app-plus": {
+					//原生标题栏按钮配置
+					"titleNView": {
+						"titleAlign": "center",
+						"buttons": [{
+							//原生标题栏增加确定按钮，点击事件可通过页面的 onNavigationBarButtonTap 函数进行监听
+							"text": "\ue614",
+							"fontSize": "25px",
+							"width": "50px",
+							"fontSrc": "/static/iconfont.ttf"
+						}]
+					}
+				}
+			}
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "用户登录"
+			}
+		}, {
+			"path": "pages/myxingcheng/myxingcheng",
+			"style": {
+				"navigationBarTitleText": "马尔代夫七日游",
+				"app-plus": {
+					//原生标题栏按钮配置
+					"titleNView": {
+						"titleAlign": "center",
+						"buttons": [{
+							//原生标题栏增加确定按钮，点击事件可通过页面的 onNavigationBarButtonTap 函数进行监听
+							"text": "\ue628",
+							"fontSize": "25px",
+							"width": "50px",
+							"fontSrc": "/static/iconfont.ttf"
+						}]
+					}
+				}
+			}
+		}, {
+			"path": "pages/bill/bill",
+			"style": {
+				"navigationBarTitleText": "旅行账本",
+				"app-plus": {
+					//原生标题栏按钮配置
+					"titleNView": {
+						"titleAlign": "center",
+						"buttons": [{
+							//原生标题栏增加确定按钮，点击事件可通过页面的 onNavigationBarButtonTap 函数进行监听
+							"text": "\ue634",
+							"fontSize": "25px",
+							"width": "50px",
+							"fontSrc": "/static/iconfont.ttf"
+						}]
+					}
+				}
+			}
+		}, {
+			"path": "pages/accounts/accounts",
+			"style": {
+				"navigationBarTitleText": "添加账目",
+				"app-plus": {
+					//原生标题栏按钮配置
+					"titleNView": {
+						"titleAlign": "center",
+						"buttons": [{
+							//原生标题栏增加确定按钮，点击事件可通过页面的 onNavigationBarButtonTap 函数进行监听
+							"text": "确定",
+							"fontSize": "14px",
+							"width": "70px"
+						}]
+					}
+				}
 			}
 		}
 	],

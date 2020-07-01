@@ -1,0 +1,148 @@
+text {
+	font-family: PingFang;
+}
+
+.page_header {
+	position: sticky;
+	z-index: 1;
+	top: 0
+}
+
+.status_bar {
+	height: var(--status-bar-height);
+	width: 100%;
+	background-color: #FFFFFF;
+}
+
+.title_all {
+	margin-bottom: 30rpx;
+	margin-top: 20rpx;
+}
+
+.module_title {
+	font-size: 32rpx;
+	line-height: 44rpx;
+	margin-left: 40rpx;
+	font-weight: bold;
+}
+
+.module_underline {
+	width: 66rpx;
+	height: 8rpx;
+	background: rgba(65, 138, 113, 1);
+	opacity: 1;
+	border-radius: 8rpx;
+	margin-left: 40rpx;
+	margin-top: -16rpx;
+}
+
+.texticon {
+	font-family: iconfont;
+	font-size: 36rpx;
+	margin-right: 20rpx;
+}
+
+.card_username {
+	font-size: 24rpx;
+	color: #434343;
+}
+
+.card_userimg {
+	width: 40rpx;
+	height: 40rpx;
+	margin-right: 10px;
+}
+
+.card_xingchengcover {
+	/* background: url(static/xingchengcover.png); */
+	width: 100%;
+	height: 100%;
+	filter: blur(14rpx);
+	background-color: #8fbc8f;
+}
+
+.card_covertext {
+	color: #FFFFFF;
+	position: absolute;
+	text-align: center;
+	/* left: 35%; */
+	/* 	margin-top: -15%; */
+	font-size: 28rpx;
+}
+
+.card_covermask {
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, .4);
+	border-radius: 20rpx;
+}
+
+.card_cover {
+	overflow: hidden;
+	width: 670rpx;
+	height: 180rpx;
+	/* margin-left: 40rpx; */
+	border-radius: 20rpx;
+	margin: 16rpx;
+}
+
+.card_text {
+	font-size: 28rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #979797;
+}
+
+.card_noticetext {
+	color: #418A71;
+}
+
+.card_fare {
+	color: #979797;
+	font-size: 24rpx;
+}
+
+.card_top {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.common_textmini {
+	font-size: 20rpx;
+	text-align: end;
+}
+
+.common_text {
+	font-size: 28rpx;
+}
+
+.common_textbig {
+	font-size: 44rpx;
+	text-align: end;
+}
+
+.common_topbox {
+	background-color: #FFFFFF;
+	border-radius: 58rpx;
+	box-shadow: 4rpx 4rpx 40rpx #F1F1F1;
+	width: 100%;
+	margin-bottom: 50rpx;
+	padding: 10rpx 30rpx 10rpx 30rpx;
+}
+
+.common_round {
+	width: 60rpx;
+	height: 60rpx;
+	background: rgba(65, 138, 113, 1);
+	border-radius: 50%;
+	opacity: 0.22;
+	position: absolute;
+	left: 15%;
+}
+
+.common_toast{
+	color: #979797;
+}
